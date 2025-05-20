@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CLOUD WALLS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_account">Login Account</string>
+    <string name="welcome_back_to_app">Welcome back to app</string>
+    <string name="email_address">Email Address :</string>
+    <string name="password">Password :</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="or_sign_up_with">Or sign up with :</string>
+    <string name="guest_icon">Guest icon</string>
+    <string name="google_logo">Google logo</string>
+</resources>

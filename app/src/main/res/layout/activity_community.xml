@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="0dp"
+        app:iconTint="@android:color/white"
+        app:popupTheme="@style/WhiteOverflowMenu">
+
+        <!-- Custom Title -->
+        <TextView
+            android:id="@+id/customTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOUD WALLS"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="start|center_vertical"
+            android:fontFamily="@font/fredoka_one"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title "Challenges" -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Challenges"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/fredoka_one"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Photo and video competitions design to inspire you to get out there, shoot,and share your work with the world. You might even win prize while you do"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Challenge Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/challenges"
+                android:scaleType="fitCenter"
+                android:background="@android:color/white"
+                android:padding="2dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Challenge Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brainrot : Homepage Challenge"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Tags Container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- 7 Days Tag -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7 DAYS"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bordered_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <!-- Homepage Tag -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Homepage"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bordered_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Join Challenge Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join Challenge"
+                android:textColor="@color/primary"
+                android:backgroundTint="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:textSize="18sp"/>
+
+            <!-- Leaderboard Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leaderboard"
+                android:textSize="36sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/fredoka_one"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- You can add leaderboard items here -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-4dp"
+        android:background="@color/primary"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@android:color/white"
+        app:itemIconTint="@drawable/bottom_nav_colors"
+        app:itemTextColor="@drawable/bottom_nav_colors"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"/>
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".ProfileActivity"
+android:background="@color/primary">
+
+<!-- Bagian Atas: Background putih -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:paddingTop="48dp"
+android:paddingBottom="16dp">
+
+<!-- Foto Profil -->
+<androidx.cardview.widget.CardView
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    app:cardCornerRadius="60dp"
+    app:cardBackgroundColor="#F2EEFF">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img"
+        android:scaleType="centerCrop"
+        android:contentDescription="Profile Image" />
+</androidx.cardview.widget.CardView>
+
+<!-- Nama -->
+<TextView
+    android:id="@+id/profile_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mr Harry"
+    android:textSize="22sp"
+    android:textColor="#333333"
+    android:textStyle="bold"
+    android:layout_marginTop="12dp" />
+
+<!-- Jumlah View -->
+<TextView
+    android:id="@+id/view_count"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="6969"
+    android:textSize="18sp"
+    android:textColor="#666666"
+    android:layout_marginTop="4dp" />
+
+<!-- Label View -->
+<TextView
+    android:id="@+id/view_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total Views"
+    android:textSize="14sp"
+    android:textColor="#999999"
+    android:layout_marginTop="2dp" />
+</LinearLayout>
+
+    <!-- Bagian Bawah: Background primary -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:orientation="vertical"
+android:paddingHorizontal="24dp"
+android:paddingTop="16dp"
+android:paddingBottom="8dp">
+
+<!-- Ikon Aksi -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/icon_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/gambar"
+        android:adjustViewBounds="true"
+        android:maxWidth="28dp"
+        android:maxHeight="28dp"
+        android:layout_gravity="center"
+        android:contentDescription="Gallery" />
+
+    <ImageView
+        android:id="@+id/icon_bookmark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/bookmark"
+        android:adjustViewBounds="true"
+        android:maxWidth="28dp"
+        android:maxHeight="28dp"
+        android:layout_gravity="center"
+        android:contentDescription="Bookmarks" />
+
+    <ImageView
+        android:id="@+id/icon_friends"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/friends"
+        android:adjustViewBounds="true"
+        android:maxWidth="28dp"
+        android:maxHeight="28dp"
+        android:layout_gravity="center"
+        android:contentDescription="Friends" />
+</LinearLayout>
+
+<!-- Tombol Upload -->
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/upload_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="UPLOAD MEDIA"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:cornerRadius="8dp"
+    android:layout_marginTop="12dp"
+android:backgroundTint="#4CAF50" />
+
+<!-- Teks No Konten -->
+<TextView
+    android:id="@+id/no_content_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="You don't have any content yet 😔"
+    android:textSize="18sp"
+    android:textColor="@android:color/white"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp" />
+
+<!-- Deskripsi -->
+<TextView
+    android:id="@+id/description_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="It's ok, we know it's probably hard to choose what to upload from all your amazing photos. You can come back and upload at any time. In the meantime, how about some inspiration from the talented photography on Pexels?"
+    android:textSize="16sp"
+    android:textColor="@android:color/white"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:layout_marginTop="12dp"
+android:paddingHorizontal="16dp" />
+
+<!-- Tombol Get Inspired -->
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/get_inspired_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Get Inspired"
+    android:textColor="#87CEFA"
+    android:textSize="16sp"
+    android:backgroundTint="@android:color/white"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+android:layout_marginBottom="8dp"
+app:cornerRadius="5dp"
+android:paddingHorizontal="40dp"
+android:paddingVertical="12dp" />
+
+</LinearLayout>
+
+    <!-- Bottom Navigation -->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_nav"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/primary"
+app:itemIconTint="@android:color/white"
+app:itemTextColor="@android:color/white"
+app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>

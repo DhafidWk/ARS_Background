@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Ikon hamburger sebagai tombol utama -->
+    <item
+        android:id="@+id/action_menu"
+        android:icon="@drawable/hamburger"
+        app:showAsAction="always"
+        android:title="Menu">
+
+        <!-- Submenu -->
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:title="Settings"
+                android:orderInCategory="100"/>
+        </menu>
+    </item>
+</menu>
